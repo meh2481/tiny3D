@@ -17,17 +17,19 @@ typedef struct
 typedef struct
 {
 	float x, y, z;	//Position in world space
-	normal norm;
-	uv texpos;
 } vert;
 
 typedef struct
 {
 	unsigned int v1, v2, v3;
+	unsigned int norm1, norm2, norm3;
+	unsigned int uv1, uv2, uv3;
 } face;
 
 typedef struct
 {
+	unsigned int numNormals;
+	unsigned int numUVs;
 	unsigned int numVertices;
 	unsigned int numFaces;
 } tiny3dHeader;
